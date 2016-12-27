@@ -25,7 +25,7 @@ export default class ReduxRemoteLogger {
     }
   }
 
-  log (action: IAction, nextState: Object) {
+  log (action: IAction, nextState: Object): void {
     const timestamp: number = new Date().getTime()
     const stateDiff: any[] = diff(this.currentState, nextState)
     this.queue = append({
