@@ -22,7 +22,6 @@ var ReduxRemoteLogger = (function () {
     ReduxRemoteLogger.prototype.log = function (action, nextState) {
         var timestamp = new Date().getTime();
         var stateDiff = deep_diff_1.diff(this.currentState, nextState);
-        var type = action.type;
         this.queue = ramda_1.append({
             action: action,
             timestamp: timestamp,

@@ -7,12 +7,15 @@ import { diff } from 'deep-diff'
 
 export default class ReduxRemoteLogger {
  
- currentState: Object = {}
+  currentState: Object = {}
+
   defaultOptions: IOptions = {
     aggregatorURL: '',
     excludedActionTypes: []
   }
+
   options: IOptions
+  
   queue: Object[] = []
 
   constructor (options? :IOptions) {
@@ -25,7 +28,6 @@ export default class ReduxRemoteLogger {
   log (action: IAction, nextState: Object) {
     const timestamp: number = new Date().getTime()
     const stateDiff: any[] = diff(this.currentState, nextState)
-    const { type } = action
     this.queue = append({
       action,
       timestamp,
