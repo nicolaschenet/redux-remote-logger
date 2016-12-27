@@ -1,0 +1,19 @@
+{
+  "name": "redux-remote-logger",
+  "version": "0.0.1",
+  "description": "Log Redux state changes to a remote service",
+  "main": "build/index.js",
+  "author": "Nicolas Chenet <ironic51@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/deep-diff": "^0.0.29",
+    "@types/ramda": "^0.0.2",
+    "tslint": "^4.2.0",
+    "typescript": "^2.1.4"
+  },
+  "dependencies": {
+    "@types/whatwg-fetch": "0.0.33",
+    "deep-diff": "^0.3.4",
+    "ramda": "^0.22.1"
+  }
+}
